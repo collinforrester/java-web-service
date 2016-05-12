@@ -4,7 +4,7 @@
 	<groupId>com.spidertracks.demo</groupId>
 	<artifactId>rest.api</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>rest.api Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
