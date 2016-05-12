@@ -28,7 +28,7 @@ import com.spidertracks.demo.rest.api.utils.SpringMVCUtils;
 @Controller
 /**
  * This class has the logic for acting on web requests.
- * 
+ *
  * @author ajesler
  *
  */
@@ -49,14 +49,14 @@ public class WelcomeController {
 
 	@RequestMapping(value = "/hello")
 	public ResponseEntity<String> hello() {
-		return new ResponseEntity<String>("<h1>Hello!</h1>", HttpStatus.OK);
+		return new ResponseEntity<String>("<h1>Hello World (dev)!</h1>", HttpStatus.OK);
 	}
 
 	/**
 	 * Responds with a welcome message for users. Can be accessed with GET or
 	 * POST. If a name parameter is set, the name value will be included in the
 	 * welcome.
-	 * 
+	 *
 	 * @param name
 	 *            an optional name for
 	 * @return
@@ -83,7 +83,7 @@ public class WelcomeController {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param person
 	 *            the person object built from the request body.
 	 * @return a ModelAndView containing a single person object. Or an
@@ -102,14 +102,14 @@ public class WelcomeController {
 
 	@RequestMapping(value = "/people/{id}", method = RequestMethod.GET)
 	public ModelAndView getPersonById(@PathVariable(value = "id") int id) {
-		
+
 			Person p = peopleService.getPerson(id);
 			return SpringMVCUtils.getOutputModel(p);
 	}
 
 	/**
 	 * Updates a stored person.
-	 * 
+	 *
 	 * @param id
 	 * @param person
 	 *            the new person object.
@@ -161,7 +161,7 @@ public class WelcomeController {
 	/**
 	 * Shows a more descriptive error message to the user when a submitted
 	 * object fails validation.
-	 * 
+	 *
 	 * @param e
 	 *            the MethodArgumentNotValidException that we are handling.
 	 * @return A ModelAndView containing a single ApiMessage object. We also
@@ -186,7 +186,7 @@ public class WelcomeController {
 	/**
 	 * Concatenates the validation errors from the allErrors param into a single
 	 * string for display to a user.
-	 * 
+	 *
 	 * @param allErrors
 	 * @return
 	 */
