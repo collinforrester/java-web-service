@@ -49,7 +49,7 @@ public class WelcomeController {
 
 	@RequestMapping(value = "/hello")
 	public ResponseEntity<String> hello() {
-		return new ResponseEntity<String>("<h1>Hello World 0.0.5-SNAPSHOT</h1>", HttpStatus.OK);
+		return new ResponseEntity<String>("<h1>Hello World 0.0.6-SNAPSHOT</h1>", HttpStatus.OK);
 	}
 
 	/**
